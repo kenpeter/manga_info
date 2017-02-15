@@ -56,7 +56,7 @@ server.route({
 	  // get
 	  // api table
 	  // func, error, response, body
-		Request.get('https://www.mangaeden.com/api/list/0/?p=0', function (error, response, body) {
+		Request.get('https://www.mangaeden.com/api/list/0/', function (error, response, body) {
 		  // error
 			if (error) {
 			  // throw error
