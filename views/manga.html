@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>{{ result.title }}</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+
+	<style>
+		li {
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+
+<!-- container -->
+<div class="container">
+  <!-- section, col -->
+  <div class="section columns">
+    <!-- col is-8, is offset 2-->
+	  <div class="column is-8 is-offset-2">
+	    <!-- title, text centered -->
+		  <h2 class="title has-text-centered">
+			  {{ result.title }}
+			</h2>
+
+      <!-- a box -->
+			<div class="box">
+			  <!-- media -->
+			  <article class="media" style="min-height: 150px">
+			    <!-- media left -->
+				  <div class="media-left">
+				    <!-- figure, img, is-64 64 -->
+				    <figure class="image is-96x96">
+				      <img src="https://cdn.mangaeden.com/mangasimg/{{ result.image }}" alt="Cover">
+				    </figure>
+				  </div>
+				  
+				  <!-- middle -->
+				  <div class="media-content">
+					  <div class="content">
+					    <aside class="menu">
+					    
+								<ul class="menu-list">
+                  <li>
+                    <strong>Name:</strong> {{ result.title }}
+                  </li>
+                  <li>
+                    <strong>Cat:</strong>
+                    {{#each result.categories }}
+                      {{ this }},
+                    {{/each }}
+                  </li>
+                  </li>
+                </ul>
+					    </aside>
+					  </div>
+				  </div>
+				  
+				  <!-- right -->
+				  <div class="media-right">
+					  <a href="/" class="button">Home</a>
+					</div>
+				</article>
+		  </div>
+
+      <!-- another box -->
+			<div class="box">
+				<div class="content has-text-centered">
+				  {{ mangaId }}
+				
+					{{#each result.chapters}}
+						<div class="box">
+						  <!-- https://www.mangaeden.com/api/chapter/582e3ade719a167688dcab8e/ -->
+						  <!-- https://stackoverflow.com/questions/13645084/access-a-variable-outside-the-scope-of-a-handlebars-js-each-loop -->
+						  <a target="_blank" href="/chapter/{{ this.[3] }}/{{ ../mangaId }}">
+							Chapter: {{ this.[0] }}<br/>
+							Title: {{ this.[2] }}<br/>
+							</a>
+						</div>
+					{{/each}}
+				</div>
+						
+		  </div>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

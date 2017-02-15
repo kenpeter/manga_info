@@ -1,0 +1,26 @@
+{
+  "name": "manga_info",
+  "version": "1.0.0",
+  "description": "A sample app that demonstrates how to consume mango RESTful API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "manga",
+    "restful",
+    "api",
+    "nodejs"
+  ],
+  "author": "kenpeter",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "hapi": "^16.0.2",
+    "lodash.filter": "^4.6.0",
+    "lodash.take": "^4.1.1",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "vision": "^4.1.1"
+  }
+}
