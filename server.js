@@ -158,7 +158,7 @@ server.route({
 			
 			//console.log(imgs);
 			
-			reply.view('chapter', { result: imgs, mangaId: mangaId });
+			reply.view('chapter', { result: imgs, mangaId: mangaId, chapterId: chapterId });
 			
 		});
 	}

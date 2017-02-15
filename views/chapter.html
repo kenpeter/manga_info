@@ -36,7 +36,7 @@
 				  <div class="media-left">
 				    <!-- figure, img, is-64 64 -->
 				    <figure class="image is-96x96">
-				      <img src="https://cdn.mangaeden.com/mangasimg/{{ result.image }}" alt="Cover">
+				      <img src="https://cdn.mangaeden.com/mangasimg/{{ result.[0].[1] }}" alt="Cover">
 				    </figure>
 				  </div>
 				  
@@ -46,16 +46,14 @@
 					    <aside class="menu">
 					    
 								<ul class="menu-list">
+								  <li>
+                    <strong>mangaId:</strong> {{ mangaId }}
+                  </li>
+								
                   <li>
-                    <strong>Name:</strong> {{ result.title }}
+                    <strong>chapterId:</strong> {{ chapterId }}
                   </li>
-                  <li>
-                    <strong>Cat:</strong>
-                    {{#each result.categories }}
-                      {{ this }},
-                    {{/each }}
-                  </li>
-                  </li>
+                  
                 </ul>
 					    </aside>
 					  </div>
@@ -63,7 +61,7 @@
 				  
 				  <!-- right -->
 				  <div class="media-right">
-					  <a href="/" class="button">Home</a>
+					  <a href="/manga/{{ mangaId }}" class="button">Back to manga</a>
 					</div>
 				</article>
 		  </div>
