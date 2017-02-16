@@ -19,10 +19,10 @@ const LodashTake = require('lodash.take');
 const server = new Hapi.Server();
 
 // host: 127.0.0.1
-// port: 3000
+// port: 8006
 server.connection({
 	host: '127.0.0.1',
-	port: 3000
+	port: 8006
 });
 
 // register vision for template render

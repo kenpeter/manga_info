@@ -1,10 +1,12 @@
 {
   "name": "manga_info",
   "version": "1.0.0",
-  "description": "A sample app that demonstrates how to consume mango RESTful API",
+  "description": "A sample app that demonstrates how to consume API",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "forever start -a -l forever.log -o out.log -e err.log ./manga_info_server.js",
+    "stop": "forever stop ./manga_info_server.js",
+    "dev": "nodemon manga_info_server.js"
   },
   "keywords": [
     "manga",
